@@ -15,16 +15,23 @@ export default function Form(){
     
     function imcCalculator(){
         var calc = ((weigth/(heigth*heigth)).toFixed(2))
+        console.log("calc="+calc)
         setImc(calc);
-        verResultImc(setImc);
+        verResultImc(calc);
+        return;
     }
 
     function validationImc(){
         if(weigth != null && heigth != null){
+            console.log("hit2")
             imcCalculator();
+            console.log("hit3")
             setHeigth(null)
+            console.log("hit4")
             setWeigth(null)
-            setMessageResultImc(null)
+            console.log("hit5")
+            // setMessageResultImc(null)
+            console.log("hit6")
             setMessageImc("Seu imc é igual: ")
             setTextButton("Calcular Novamente")
             setMessageTOF("A sua condição atual é:")
@@ -37,21 +44,25 @@ export default function Form(){
         setMessageImc("Preencha o peso e a altura.")
     }
     
-    function verResultImc(imc){
-        if(imc > 0){
-            setMessageTOF("Baixo peso!");
-        } else if(imc >= 18.5){
-            setMessageTOF("Intervalo normal!");
-        } else if(imc >= 25){
-            setMessageTOF("Sobrepeso!");
-        } else if(imc >= 30){
-            setMessageTOF("Obesidade classe 1!");
-        } else if(imc >= 35){
-            setMessageTOF("Obesidade classe 2!");
-        } else if(imc >= 40){
-            setMessageTOF("Obesidade classe 3")
+    function verResultImc(intImc){
+        console.log("hitverResultImc")
+        intImc = parseInt(intImc)
+        console.log(intImc)
+        if(intImc < 0){
+            setTOF("Baixo peso!");
+        } else if(intImc >= 18.5){
+            console.log("hit SET");
+            setTOF("Intervalo normal!");
+        } else if(intImc >= 25){
+            setTOF("Sobrepeso!");
+        } else if(intImc >= 30){
+            setTOF("Obesidade classe 1!");
+        } else if(intImc >= 35){
+            setTOF("Obesidade classe 2!");
+        } else if(intImc >= 40){
+            setTOF("Obesidade classe 3")
         } else {
-            setMessageTOF("Impreciso!");
+            setTOF("Impreciso!");
         }
     }
 
@@ -85,7 +96,8 @@ export default function Form(){
                 </TouchableOpacity>
             </View>
             {/* Resultado */}
-            <ResultImc messageResultImc={messageImc} resultImc={imc} setTOF={setTOF} setMessageTOF={setMessageTOF}/>
+            <ResultImc messageResultImc={messageImc} resultImc={imc} setMessageTOF={messageTOF} setTOF={TOF} />
+
         </View>
     );
 }
