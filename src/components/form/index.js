@@ -23,15 +23,9 @@ export default function Form(){
 
     function validationImc(){
         if(weigth != null && heigth != null){
-            console.log("hit2")
             imcCalculator();
-            console.log("hit3")
             setHeigth(null)
-            console.log("hit4")
             setWeigth(null)
-            console.log("hit5")
-            // setMessageResultImc(null)
-            console.log("hit6")
             setMessageImc("Seu imc é igual: ")
             setTextButton("Calcular Novamente")
             setMessageTOF("A sua condição atual é:")
