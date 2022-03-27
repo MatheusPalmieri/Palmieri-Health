@@ -41,7 +41,6 @@ export default function Form(){
     function verResultImc(intImc){
         console.log("hitverResultImc")
         intImc = parseInt(intImc)
-        console.log(intImc)
         if(intImc < 0){
             setTOF("Baixo peso!");
         } else if(intImc >= 18.5){
