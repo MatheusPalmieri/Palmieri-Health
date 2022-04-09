@@ -15,7 +15,7 @@
  <a href="#autor">Autor</a>
 </p>
 
-<img src="images/imagem.png" width="1366px" align="center">
+<!-- <img src="images/imagem.png" width="1366px" align="center"> -->
 
 <!-- Atualizações -->
 
@@ -28,7 +28,7 @@
 
 ### Rodando A Aplicação
 
-<a href="https://rangehotels-matheuspalmieri.netlify.app//">Site Do Projeto</a>
+em breve :)
 
 ---
 
@@ -36,9 +36,10 @@
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-- [HTML](https://html.com/)
-- [CSS](https://html.com/css/)
 - [React Native](https://reactnative.dev/)
+- [Styled-Components](https://styled-components.com/)
+- [NPM](https://www.npmjs.com/)
+- [Expo](https://expo.dev/)
 
 ---
 
